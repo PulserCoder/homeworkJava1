@@ -32,6 +32,17 @@ public class Main {
         byte colorBrown = 4;
         System.out.println("В школе, где " + paintingQuantity / (colorBrown + colorWhite) + " классов, нужно " + (paintingQuantity / (colorBrown + colorWhite)) * 2 + " банок белой краски и " + (paintingQuantity / (colorBrown + colorWhite)) * 4 + " банок коричневой краски");
 
+        int efficiencyBottlesInTick = 16;
+        int tickInMinutes = 2;
+        int bottlesInMinute = efficiencyBottlesInTick / tickInMinutes;
+        int minutesInDay = 24 * 60 * 60;
+
+        System.out.println("За 20 минут машина произвела " + 20 * bottlesInMinute + " штук бутылок");
+        System.out.println("За 1 сутки машина произвела " + bottlesInMinute * minutesInDay + " штук бутылок");
+        System.out.println("За 3 суток машина произвела " + bottlesInMinute * (minutesInDay * 3) + " штук бутылок");
+        System.out.println("За месяц машина произвела " + bottlesInMinute * (minutesInDay * 30) + " штук бутылок");
+
+
         byte bananasQuantity = 5;
         short weightOneBanana = 80;
         short vMilk = 200;
