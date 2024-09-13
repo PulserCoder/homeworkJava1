@@ -1,51 +1,92 @@
 
 public class Main {
     public static void main(String[] args) {
-        // Hi, this is my first project which has written by Java, I hope I will learn a lot of interesting things
-        var dog = 8.0;
-        var cat = 3.6;
-        var paper = 763789;
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(paper);
-        var dog1 = dog + 4;
-        var cat1 = cat + 4;
-        var paper1 = paper + 4;
-        System.out.println(dog1);
-        System.out.println(cat1);
-        System.out.println(paper1);
-        dog -= 3.5;
-        cat -= 1.6;
-        paper -= 7639;
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(paper);
-        var friend = 19;
-        System.out.println(friend);
-        friend = friend + 2;
-        System.out.println(friend);
-        friend = friend / 7;
-        System.out.println(friend);
-        var frog = 3.5;
-        System.out.println(frog);
-        frog *= 10;
-        System.out.println(frog);
-        frog /= 3.5;
-        System.out.println(frog);
-        frog += 4;
-        System.out.println(frog);
-        var massOfBoxer1 = 78.2;
-        var massOfBoxer2 = 82.7;
-        System.out.println(massOfBoxer1 + massOfBoxer2);
-        System.out.println(massOfBoxer2 - massOfBoxer1);
-        System.out.println(massOfBoxer2 % massOfBoxer1);
-        var commonHours = 640;
-        var quanityOfWorkers = commonHours / 8;
-        System.out.println("Всего работников в компании — " + quanityOfWorkers + " человек");
-        quanityOfWorkers += 94;
-        commonHours = quanityOfWorkers * 8;
-        System.out.println("Если в компании работает " + quanityOfWorkers + " человек, то всего " + commonHours + " часов работы может быть поделено между сотрудниками");
-
+        //task1
+        int clientOS = 1;
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+        //task2
+        int clientOS2 = 1;
+        int clientDeviceYear = 2019;
+        if (clientDeviceYear < 2015 && clientOS2 == 0) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientDeviceYear < 2015 && clientOS2 == 1){
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        }
+        else if (clientOS2 == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+        //task3
+        int year = 1600;
+        if ((year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)) && year > 1584) {
+            System.out.println(year + " год является високосным");
+        } else {
+            System.out.println(year + " год не является високосным");
+        }
+        //task4
+        int deliveryDistance = 95;
+        int days;
+        if (deliveryDistance <= 20) {
+            days = 1;
+        } else if (deliveryDistance <= 60) {
+            days = 2;
+        } else if (deliveryDistance <= 100) {
+            days = 3;
+        } else {
+            days = 0;
+        }
+        if (days == 0) {
+            System.out.println("увы, доставку не осуществляем временно");
+        } else {
+            System.out.println("Потребуется дней: " + days);
+        }
+        //task5
+        int monthNumber = 13;
+        switch (monthNumber) {
+            case 1:
+                System.out.println("Зима");
+                break;
+            case 2:
+                System.out.println("Зима");
+                break;
+            case 3:
+                System.out.println("Весна");
+                break;
+            case 4:
+                System.out.println("Весна");
+                break;
+            case 5:
+                System.out.println("Весна");
+                break;
+            case 6:
+                System.out.println("Лето");
+                break;
+            case 7:
+                System.out.println("Лето");
+                break;
+            case 8:
+                System.out.println("Лето");
+                break;
+            case 9:
+                System.out.println("Осень");
+                break;
+            case 10:
+                System.out.println("Осень");
+                break;
+            case 11:
+                System.out.println("Осень");
+                break;
+            case 12:
+                System.out.println("Зима");
+                break;
+            default:
+                System.out.println("такого месяца не бывает");
+        }
 
     }
 }
