@@ -3,30 +3,23 @@ public class Main {
     public static void main(String[] args) {
         //task1
         int clientOS = 1;
-        switch (clientOS) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
-
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
         //task2
         int clientOS2 = 1;
-        int clientDeviceYear = 2014;
-        if (clientDeviceYear < 2015) {
-            if (clientOS2 == 0) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }
+        int clientDeviceYear = 2019;
+        if (clientDeviceYear < 2015 && clientOS2 == 0) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientDeviceYear < 2015 && clientOS2 == 1){
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        }
+        else if (clientOS2 == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
         } else {
-            if (clientOS2 == 0) {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
         //task3
         int year = 1600;
@@ -53,8 +46,8 @@ public class Main {
             System.out.println("Потребуется дней: " + days);
         }
         //task5
-        int numOfMonths = 13;
-        switch (numOfMonths) {
+        int monthNumber = 13;
+        switch (monthNumber) {
             case 1:
                 System.out.println("Зима");
                 break;
