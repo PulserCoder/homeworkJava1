@@ -2,13 +2,14 @@
 public class Main {
     public static void main(String[] args) {
         //task1
-        int total = 0;
+        float total = 0f;
         int goal = 2_459_000;
         int monthlyPayment = 15000;
         int i = 1;
         while (total < goal) {
             total += monthlyPayment;
-            System.out.printf("Месяц %d, сумма накоплений равна %d рублей\n", i, total);
+            total += (float) (total * 0.01);
+            System.out.printf("Месяц %d, сумма накоплений равна %s рублей\n", i, total);
             i++;
         }
         //task2
