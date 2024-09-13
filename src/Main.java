@@ -1,52 +1,80 @@
 
 public class Main {
     public static void main(String[] args) {
-        // Hi, this is my first project which has written by Java, I hope I will learn a lot of interesting things
-        var dog = 8.0;
-        var cat = 3.6;
-        var paper = 763789;
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(paper);
-        var dog1 = dog + 4;
-        var cat1 = cat + 4;
-        var paper1 = paper + 4;
-        System.out.println(dog1);
-        System.out.println(cat1);
-        System.out.println(paper1);
-        dog -= 3.5;
-        cat -= 1.6;
-        paper -= 7639;
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(paper);
-        var friend = 19;
-        System.out.println(friend);
-        friend = friend + 2;
-        System.out.println(friend);
-        friend = friend / 7;
-        System.out.println(friend);
-        var frog = 3.5;
-        System.out.println(frog);
-        frog *= 10;
-        System.out.println(frog);
-        frog /= 3.5;
-        System.out.println(frog);
-        frog += 4;
-        System.out.println(frog);
-        var massOfBoxer1 = 78.2;
-        var massOfBoxer2 = 82.7;
-        System.out.println(massOfBoxer1 + massOfBoxer2);
-        System.out.println(massOfBoxer2 - massOfBoxer1);
-        System.out.println(massOfBoxer2 % massOfBoxer1);
-        var commonHours = 640;
-        var quanityOfWorkers = commonHours / 8;
-        System.out.println("Всего работников в компании — " + quanityOfWorkers + " человек");
-        quanityOfWorkers += 94;
-        commonHours = quanityOfWorkers * 8;
-        System.out.println("Если в компании работает " + quanityOfWorkers + " человек, то всего " + commonHours + " часов работы может быть поделено между сотрудниками");
-
-
+        //task1
+        float total = 0f;
+        int goal = 2_459_000;
+        int monthlyPayment = 15000;
+        int i = 1;
+        while (total < goal) {
+            total += monthlyPayment;
+            total += (float) (total * 0.01);
+            System.out.printf("Месяц %d, сумма накоплений равна %s рублей\n", i, total);
+            i++;
+        }
+        //task2
+        int i2 = 1;
+        while (i2 <= 10) {
+            System.out.print(i2);
+            System.out.print(" ");
+            i2++;
+        }
+        System.out.print("\n");
+        for (int i3 = 10; i3 > 0; i3--) {
+            System.out.print(i3 + " ");
+        }
+        System.out.println("\n");
+        //task 3
+        int people = 12000000;
+        int bitrhRateAt1000 = 17;
+        int deathRateAt1000 = 8;
+        for (int j = 0; j < 10; j++) {
+            int addingPeopleAtYear = people / 1000 * (bitrhRateAt1000 - deathRateAt1000);
+            System.out.printf("Год %s, численность населения составляет %s\n", j + 1, people + addingPeopleAtYear);
+            people += addingPeopleAtYear;
+        }
+        //task4
+        double total2 = 15000;
+        int month = 1;
+        while (total2 < 12000000) {
+            total2 += Math.round(total2 * 0.07);
+            System.out.printf("В месяц %s на счету лежит %s\n", month, (int) total2);
+            month += 1;
+        }
+        //task5
+        double total3 = 15000;
+        int month2 = 1;
+        while (total3 < 12000000) {
+            total3 += Math.round(total3 * 0.07);
+            if (month2 % 6 == 0) {
+                System.out.printf("В месяц %s на счету лежит %s\n", month2, (int) total3);
+            }
+            month2 += 1;
+        }
+        //task 6
+        double total4 = 15000;
+        int month4 = 1;
+        while (month4 <= 12 * 9) {
+            total4 += Math.round(total4 * 0.07);
+            if (month4 % 6 == 0) {
+                System.out.printf("В месяц %s на счету лежит %s\n", month4, (int) total4);
+            }
+            month4 += 1;
+        }
+        //task7
+        int numOfFriday = 4;
+        for (int x = numOfFriday; x <= 31; x += 7) {
+            System.out.printf("Сегодня пятница, %s-е число. Необходимо подготовить отчет\n", x);
+        }
+        //task 8
+        int nowYear = 2024;
+        int start = nowYear - 200;
+        int end = nowYear + 100;
+        for (int y = start; y < end; y += 1) {
+            if (y % 79 == 0) {
+                System.out.println(y);
+            }
+        }
     }
 }
 
